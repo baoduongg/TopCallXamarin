@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mvvm:ViewBase xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mvvm="clr-namespace:TinyMvvm.Forms;assembly=TinyMvvm.Forms"
+             BackgroundColor="{StaticResource BackgroundPrimary}"
+               Title="History"
+             x:Class="TopCallXamarin.Views.HistoryView">
+    <ContentPage.Content>
+    </ContentPage.Content>
+</mvvm:ViewBase>

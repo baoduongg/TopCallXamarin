@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+     <data name="Username" xml:space="preserve">
+        <value>Tên người dùng</value>
+    </data>
+    <data name="Password" xml:space="preserve">
+        <value>Mật khẩu</value>
+    </data>
+    <data name="UsernameOrPasswordWrong" xml:space="preserve">
+        <value>* Tên đăng nhập hoặc mật khẩu không đúng</value>
+    </data>
+    <data name="Loading" xml:space="preserve">
+        <value>Đang tải...</value>
+    </data>
+    <data name="Slogan" xml:space="preserve">
+        <value>Dịch vụ CRM và PBX</value>
+    </data>
+    <data name="Copyright" xml:space="preserve">
+        <value>Bản quyền © 2018 TOPCALL. Đã đăng ký bản quyền</value>
+    </data>
+    <data name="NoConnection" xml:space="preserve">
+        <value>Không có kết nối mạng...</value>
+    </data>
+    <data name="Login" xml:space="preserve">
+        <value>Đăng nhập</value>
+    </data>
+</root>

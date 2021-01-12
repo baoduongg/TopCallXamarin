@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:TopCallXamarin.Views"
+       Title="TopCallXamarin"
+       FlyoutBehavior="Disabled"
+       x:Class="TopCallXamarin.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#80dbdbdb
+                        " />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#FFFFFF" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#999999"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Primary}"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <!--Login View-->
+    <TabBar Route="LoginView">
+        <ShellContent ContentTemplate="{DataTemplate local:LoginView}"/>
+    </TabBar>
+
+    <!--Main View-->
+    <TabBar Route="main">
+        <Tab Title="Dashboard"
+             Icon="ic_dashboard">
+            <ShellContent ContentTemplate="{DataTemplate local:DashboardView}" />
+        </Tab>
+        <Tab Title="Todo"
+             Icon="ic_todo">
+            <ShellContent ContentTemplate="{DataTemplate local:TodoView}" />
+        </Tab>
+        <Tab Title="Working"
+             Icon="ic_working">
+            <ShellContent ContentTemplate="{DataTemplate local:WorkingView}" />
+        </Tab>
+        <Tab Title="History"
+             Icon="ic_history">
+            <ShellContent ContentTemplate="{DataTemplate local:HistoryView}" />
+        </Tab>
+        <Tab Title="Account"
+             Icon="ic_account">
+            <ShellContent ContentTemplate="{DataTemplate local:AccountView}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

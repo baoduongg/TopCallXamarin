@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB27B10D-DD88-4AEE-952B-FF586D5705CB}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6968b3a4-1835-46a3-ac5c-1ae33b475983}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TopCallXamarin.Droid</RootNamespace>
+    <AssemblyName>TopCallXamarin.Android</AssemblyName>
+    <Deterministic>True</Deterministic>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
+    <PackageReference Include="Xamarin.AndroidX.Core">
+      <Version>1.3.2.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\AndroidShellRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.xml" />
+    <AndroidResource Include="Resources\layout\Toolbar.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
+    <AndroidResource Include="Resources\drawable\icon_about.png" />
+    <AndroidResource Include="Resources\drawable\icon_feed.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_dashboard.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_dashboard.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_dashboard.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_todo.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_todo.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_todo.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_working.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_working.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_working.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_history.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_history.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_history.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_account.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_account.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_account.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_key.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_key.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_key.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\bg.jpg">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_logo.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_logo.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_logo.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TopCallXamarin\TopCallXamarin.csproj">
+      <Project>{4C184308-4508-47DC-A83F-6089814EAF60}</Project>
+      <Name>TopCallXamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbtoSdkBindAndroid\AbtoSdkBindAndroid.csproj">
+      <Project>{170BA7D8-659B-475B-991E-368D534F20AC}</Project>
+      <Name>AbtoSdkBindAndroid</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="libs\" />
+    <Folder Include="libs\arm64-v8a\" />
+    <Folder Include="libs\armeabi-v7a\" />
+    <Folder Include="libs\x86\" />
+    <Folder Include="libs\x86_64\" />
+    <Folder Include="Renderers\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidNativeLibrary Include="libs\arm64-v8a\libabto_codec2_codec.so" />
+    <AndroidNativeLibrary Include="libs\arm64-v8a\libabto_g7221_codec.so" />
+    <AndroidNativeLibrary Include="libs\arm64-v8a\libabto_g723_codec.so" />
+    <AndroidNativeLibrary Include="libs\arm64-v8a\libabto_g729_codec.so" />
+    <AndroidNativeLibrary Include="libs\arm64-v8a\libabto_opus_codec.so" />
+    <AndroidNativeLibrary Include="libs\arm64-v8a\libabto_video_android.so" />
+    <AndroidNativeLibrary Include="libs\arm64-v8a\libabto_vpx.so" />
+    <AndroidNativeLibrary Include="libs\arm64-v8a\libabtovoipjni.so" />
+    <AndroidNativeLibrary Include="libs\arm64-v8a\libopensl_dev.so" />
+    <AndroidNativeLibrary Include="libs\arm64-v8a\libstlport_shared.so" />
+    <AndroidNativeLibrary Include="libs\armeabi-v7a\libabto_codec2_codec.so" />
+    <AndroidNativeLibrary Include="libs\armeabi-v7a\libabto_g7221_codec.so" />
+    <AndroidNativeLibrary Include="libs\armeabi-v7a\libabto_g723_codec.so" />
+    <AndroidNativeLibrary Include="libs\armeabi-v7a\libabto_g729_codec.so" />
+    <AndroidNativeLibrary Include="libs\armeabi-v7a\libabto_opus_codec.so" />
+    <AndroidNativeLibrary Include="libs\armeabi-v7a\libabto_video_android.so" />
+    <AndroidNativeLibrary Include="libs\armeabi-v7a\libabto_vpx.so" />
+    <AndroidNativeLibrary Include="libs\armeabi-v7a\libabtovoipjni.so" />
+    <AndroidNativeLibrary Include="libs\armeabi-v7a\libopensl_dev.so" />
+    <AndroidNativeLibrary Include="libs\armeabi-v7a\libstlport_shared.so" />
+    <AndroidNativeLibrary Include="libs\x86\libabto_codec2_codec.so" />
+    <AndroidNativeLibrary Include="libs\x86\libabto_g7221_codec.so" />
+    <AndroidNativeLibrary Include="libs\x86\libabto_g723_codec.so" />
+    <AndroidNativeLibrary Include="libs\x86\libabto_g729_codec.so" />
+    <AndroidNativeLibrary Include="libs\x86\libabto_opus_codec.so" />
+    <AndroidNativeLibrary Include="libs\x86\libabto_video_android.so" />
+    <AndroidNativeLibrary Include="libs\x86\libabto_vpx.so" />
+    <AndroidNativeLibrary Include="libs\x86\libabtovoipjni.so" />
+    <AndroidNativeLibrary Include="libs\x86\libopensl_dev.so" />
+    <AndroidNativeLibrary Include="libs\x86\libstlport_shared.so" />
+    <AndroidNativeLibrary Include="libs\x86_64\libabto_codec2_codec.so" />
+    <AndroidNativeLibrary Include="libs\x86_64\libabto_g7221_codec.so" />
+    <AndroidNativeLibrary Include="libs\x86_64\libabto_g723_codec.so" />
+    <AndroidNativeLibrary Include="libs\x86_64\libabto_g729_codec.so" />
+    <AndroidNativeLibrary Include="libs\x86_64\libabto_opus_codec.so" />
+    <AndroidNativeLibrary Include="libs\x86_64\libabto_video_android.so" />
+    <AndroidNativeLibrary Include="libs\x86_64\libabto_vpx.so" />
+    <AndroidNativeLibrary Include="libs\x86_64\libabtovoipjni.so" />
+    <AndroidNativeLibrary Include="libs\x86_64\libopensl_dev.so" />
+    <AndroidNativeLibrary Include="libs\x86_64\libstlport_shared.so" />
+  </ItemGroup>
+ <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

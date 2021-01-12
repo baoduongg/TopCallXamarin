@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+    <attr path="/api/package[@name='org.abtollc.service']/class[@name='ABTOSipService.ReturnRunnable']/method[@name='doRun']" name="visibility">protected</attr>
+    <remove-node path="/api/package[@name='org.abtollc.sdk']/interface[@name='AbtoPhone.SurfaceReadyListener']" />
+    <remove-node path="/api/package[@name='org.abtollc.sdk']/class[@name='AbtoPhone.1']" />
+    <remove-node path="/api/package[@name='org.abtollc.sdk']/class[@name='AbtoPhone.2']" />
+</metadata>

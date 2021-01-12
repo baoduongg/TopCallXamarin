@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mvvm:ShellViewBase
+    xmlns:mvvm="clr-namespace:TinyMvvm.Forms;assembly=TinyMvvm.Forms"
+    xmlns:vm="clr-namespace:TopCallXamarin.ViewModels"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+    xmlns:materialFrame="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:resource="clr-namespace:TopCallXamarin.Resources"
+    xmlns:fontSizes="clr-namespace:XF.Material.Forms.Resources.Typography;assembly=XF.Material"
+    Shell.NavBarIsVisible="False"
+    x:Class="TopCallXamarin.Views.LoginView"
+    Title="Login"
+     x:TypeArguments="vm:LoginViewModel">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand"
+          VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        Grid.Row="0"
+                                        Grid.RowSpan="3"
+                                        Aspect="AspectFill"
+                                        >
+                <!--Source="bg"-->
+
+            </ffimageloading:CachedImage>
+            <StackLayout HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Orientation="Vertical"
+                         Padding="28, 0"
+                         Spacing="6">
+                <ffimageloading:CachedImage Source="ic_logo"/>
+                <material:MaterialLabel Text="{x:Static resource:AppResources.Slogan}"
+                                        HorizontalTextAlignment="Center"
+                                        FontAttributes="Bold"
+                                        TextColor="Black"
+                                        FontSize="Large"/>
+
+            </StackLayout>
+            <materialFrame:MaterialFrame Grid.Row="1"
+                                         LightThemeBackgroundColor="#B3c2c2c2"
+                                         IsClippedToBounds="True"
+                                         Elevation="0"
+                                         Padding="10"
+                                         CornerRadius="0"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center">
+                <StackLayout HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Spacing="16"
+                         Orientation="Vertical">
+                    <material:MaterialTextField Placeholder="{x:Static resource:AppResources.Username}"
+                                                CardBackgroundColor="#B3FFFFFF"
+                                                PlaceholderColor="Gray"
+                                                LeadingIcon="ic_account"
+                                                AlwaysShowUnderline="True"
+                                                TintColor="{StaticResource Primary}"
+                                                LeadingIconTintColor="{StaticResource Primary}"
+                                                HasError="{Binding IsWrongUsername}"
+                                                ErrorText="{Binding MsgWrongUsername}"
+                                                Text="{Binding Username}"
+                                                HorizontalPadding="10"/>
+                    <material:MaterialTextField Placeholder="{x:Static resource:AppResources.Password}"
+                                                CardBackgroundColor="#B3FFFFFF"
+                                                PlaceholderColor="Gray"
+                                                HorizontalPadding="10"
+                                                LeadingIcon="ic_key"
+                                                AlwaysShowUnderline="True"
+                                                TintColor="{StaticResource Primary}"
+                                                ErrorText="{Binding MsgWrongPassword}"
+                                                HasError="{Binding IsWrongPassword}"
+                                                Text="{Binding Password}"
+                                                LeadingIconTintColor="{StaticResource Primary}"
+                                                InputType="Password"/>
+                    <material:MaterialCheckbox Text="Remember me"
+                                               SelectedColor="{StaticResource Primary}"
+                                               UnselectedColor="Gray"
+                                               IsSelected="{Binding IsRememberMe}"/>
+                    <material:MaterialButton Text="{x:Static resource:AppResources.Login}"
+                                             HeightRequest="64"
+                                             Padding="-100"
+                                             Margin="-5"
+                                             BackgroundColor="{StaticResource Primary}"
+                                             PressedBackgroundColor="Black"
+                                             TextColor="White"
+                                             Command="{Binding LoginCommand}"/>
+                </StackLayout>
+            </materialFrame:MaterialFrame>
+            <StackLayout HorizontalOptions="Center"
+                         VerticalOptions="End"
+                         Orientation="Vertical"
+                         Padding="28, 10"
+                         Grid.Row="2">
+                <material:MaterialLabel Text="{x:Static resource:AppResources.Copyright}"
+                                        HorizontalTextAlignment="Center"
+                                        TextColor="Gray"
+                                        FontAttributes="Bold"
+                                        FontSize="Micro"/>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</mvvm:ShellViewBase>
